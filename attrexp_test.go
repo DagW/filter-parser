@@ -2,9 +2,10 @@ package filter
 
 import (
 	"fmt"
-	"github.com/di-wu/parser/ast"
-	"github.com/scim2/filter-parser/grammar"
 	"testing"
+
+	"github.com/di-wu/parser/ast"
+	"github.com/scim2/filter-parser/v2/grammar"
 )
 
 func ExampleParseAttrExp_pr() {

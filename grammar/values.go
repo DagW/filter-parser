@@ -3,7 +3,7 @@ package grammar
 import (
 	"github.com/di-wu/parser/ast"
 	"github.com/di-wu/parser/op"
-	typ "github.com/scim2/filter-parser/types"
+	typ "github.com/scim2/filter-parser/v2/types"
 )
 
 // A boolean has no case sensitivity or uniqueness.
@@ -12,7 +12,7 @@ import (
 func False(p *ast.Parser) (*ast.Node, error) {
 	return p.Expect(
 		ast.Capture{
-			Type:  typ.False,
+			Type: typ.False,
 			Value: op.And{
 				op.Or{'F', 'f'},
 				op.Or{'A', 'a'},
@@ -36,7 +36,7 @@ func Null(p *ast.Parser) (*ast.Node, error) {
 func True(p *ast.Parser) (*ast.Node, error) {
 	return p.Expect(
 		ast.Capture{
-			Type:  typ.True,
+			Type: typ.True,
 			Value: op.And{
 				op.Or{'T', 't'},
 				op.Or{'R', 'r'},
